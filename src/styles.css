@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  background-color: #f9fafb;
+}
+
+.App {
+  font-family: sans-serif;
+}
+
+.flex {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  padding: 1rem;
+  margin: 1rem;
+  /* background-color: aqua; */
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  margin: 1rem;
+  background-color: black;
+}

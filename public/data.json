@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "brand": "HELMONT",
+    "name": "Striped Men Hooded Neck Red, Black T-Shirt",
+    "size": ["S", "M", "XL"],
+    "gender": ["M"],
+    "price": "209",
+    "mrp": "999",
+    "img": {
+      "default": "https://rukminim1.flixcart.com/image/495/594/kf1fo280hlty2aw-0/t-shirt/w/s/e/-original-imafdfvvr8hqdu65.jpeg?q=50"
+    }
+  },
+  {
+    "id": "2",
+    "brand": "TRIPR",
+    "name": "Printed Men Hooded Neck Black T-Shirt",
+    "size": ["L", "XL"],
+    "gender": ["M"],
+    "price": "309",
+    "mrp": "1399",
+    "img": {
+      "default": "https://rukminim1.flixcart.com/image/495/594/kl2mljk0/t-shirt/a/3/k/4xl-tblhdfulmask-lion-tripr-original-imagy9tcx7q25wym.jpeg?q=50"
+    }
+  }
+]
