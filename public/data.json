@@ -22,5 +22,77 @@
     "img": {
       "default": "https://rukminim1.flixcart.com/image/495/594/kl2mljk0/t-shirt/a/3/k/4xl-tblhdfulmask-lion-tripr-original-imagy9tcx7q25wym.jpeg?q=50"
     }
+  },
+  {
+    "id": "3",
+    "brand": "Baba Kurti",
+    "name": "Women Kurta and Dupatta Set Rayon",
+    "size": ["S", "M", "L", "XL"],
+    "gender": ["F"],
+    "price": "500",
+    "mrp": "2999",
+    "img": {
+      "default": "https://rukminim1.flixcart.com/image/495/594/k6l2vm80/ethnic-set/n/j/v/xxl-bkgreen-baba-kurti-original-imafpytuqxvjyebf.jpeg?q=50"
+    }
+  },
+  {
+    "id": "4",
+    "brand": "Eyebogler",
+    "name": "Color Block Men Hooded Neck Multicolor T-Shirt",
+    "size": ["S", "L", "XL"],
+    "gender": ["M"],
+    "price": "286",
+    "mrp": "1299",
+    "img": {
+      "default": "https://rukminim1.flixcart.com/image/495/594/kkec4280/t-shirt/b/m/i/l-t345-blwhrd-new-eyebogler-original-imafzr4f7nxecr44.jpeg?q=50"
+    }
+  },
+  {
+    "id": "5",
+    "brand": "Surhi",
+    "name": "Men Slim Fit Checkered Casual Shirt",
+    "size": ["M", "L", "XL"],
+    "gender": ["M"],
+    "price": "464",
+    "mrp": "1999",
+    "img": {
+      "default": "https://rukminim1.flixcart.com/image/495/594/kc0u7bk0/shirt/g/c/6/m-pk19sh09b-surhi-original-imaft8w4sdbfhphu.jpeg?q=50"
+    }
+  },
+  {
+    "id": "6",
+    "brand": "TRIPR",
+    "name": "Solid Men Henley Neck Pink, Black T-Shirt",
+    "size": ["M", "XL"],
+    "gender": ["M"],
+    "price": "284",
+    "mrp": "1299",
+    "img": {
+      "default": "https://rukminim1.flixcart.com/image/495/594/knj7wcw0/t-shirt/c/o/p/m-tlorblhenful-d37-tripr-original-imag2747grvpz4gq.jpeg?q=50"
+    }
+  },
+  {
+    "id": "7",
+    "brand": "Fast Colors",
+    "name": "Solid Men Mandarin Collar White, Blue T-Shirt",
+    "size": ["S", "XL"],
+    "gender": ["M"],
+    "price": "287",
+    "mrp": "1499",
+    "img": {
+      "default": "https://rukminim1.flixcart.com/image/495/594/kjuby4w0/t-shirt/4/f/7/xl-fc4057-fastcolors-original-imafzbj56yxpkzzh.jpeg?q=50"
+    }
+  },
+  {
+    "id": "8",
+    "brand": "Seven Rocks ",
+    "name": "Solid Men Mandarin Collar Green T-Shirt",
+    "size": ["S", "M", "L", "XL"],
+    "gender": ["M"],
+    "price": "1099",
+    "mrp": "1499",
+    "img": {
+      "default": "https://rukminim1.flixcart.com/image/495/594/kf75fgw0-0/t-shirt/e/v/2/xxl-t325-pwgh-seven-rocks-original-imafvpbgpyqbzypw.jpeg?q=50"
+    }
   }
 ]

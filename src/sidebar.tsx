@@ -6,9 +6,9 @@ import { DataInterface } from "./types";
 const Aside = styled.aside`
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 25%;
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem 0 1rem 1rem;
 `;
 
 export default function Sidebar({

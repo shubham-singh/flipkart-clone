@@ -1,3 +1,12 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-block-start: 0.6rem;
+  margin-block-end: 0.6rem;
+}
 body {
   margin: 0;
   background-color: #f9fafb;
@@ -9,24 +18,5 @@ body {
 
 .flex {
   display: flex;
-  width: 100vw;
   height: 100vh;
-}
-
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  padding: 1rem;
-  margin: 1rem;
-  /* background-color: aqua; */
-}
-
-.products {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-  margin: 1rem;
-  background-color: black;
 }

@@ -1,5 +1,16 @@
 import { Fragment } from "react";
+import styled from "styled-components";
 import { DataInterface, ProductInterface } from "./types";
+
+const FlexColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const FlexRow = styled.div`
+  display: flex;
+  margin: 0.2rem 0;
+`;
 
 export default function Filter({
   data,
@@ -8,9 +19,13 @@ export default function Filter({
   data: DataInterface;
   setData: React.Dispatch<React.SetStateAction<DataInterface>>;
 }) {
-  const brands: string[] = data.products.reduce((accumulator, current) => {
-    return accumulator.concat(current.brand);
-  }, []);
+  const brands: string[] = data.products
+    .reduce((accumulator, current) => {
+      return accumulator.includes(current.brand)
+        ? accumulator
+        : accumulator.concat(current.brand);
+    }, [])
+    .sort((a, b) => a.localeCompare(b));
 
   function handleBrandSelection(e: any) {
     if (!e.target.checked) {
@@ -80,42 +95,52 @@ export default function Filter({
 
   return (
     <>
-      <div>
-        <h1>Size</h1>
-        <label htmlFor="size-small">Small</label>
-        <input
-          id="size-small"
-          type="checkbox"
-          value="S"
-          onChange={handleSizeSelection}
-        />
-        <label htmlFor="size-medium">Medium</label>
-        <input
-          id="size-medium"
-          type="checkbox"
-          value="M"
-          onChange={handleSizeSelection}
-        />
-        <label htmlFor="size-large">Large</label>
-        <input
-          id="size-large"
-          type="checkbox"
-          value="L"
-          onChange={handleSizeSelection}
-        />
-        <label htmlFor="size-xlarge">X Large</label>
-        <input
-          id="size-xlarge"
-          type="checkbox"
-          value="XL"
-          onChange={handleSizeSelection}
-        />
-      </div>
-      <div>
-        <h1>Brand</h1>
+      <h3>Filter</h3>
+      <FlexColumn>
+        <h4>Size</h4>
+        <FlexRow>
+          <input
+            id="size-small"
+            type="checkbox"
+            value="S"
+            onChange={handleSizeSelection}
+          />
+          <label htmlFor="size-small">Small</label>
+        </FlexRow>
+        <FlexRow>
+          <input
+            id="size-medium"
+            type="checkbox"
+            value="M"
+            onChange={handleSizeSelection}
+          />
+          <label htmlFor="size-medium">Medium</label>
+        </FlexRow>
+        <FlexRow>
+          <input
+            id="size-large"
+            type="checkbox"
+            value="L"
+            onChange={handleSizeSelection}
+          />
+          <label htmlFor="size-large">Large</label>
+        </FlexRow>
+        <FlexRow>
+          <input
+            id="size-xlarge"
+            type="checkbox"
+            value="XL"
+            onChange={handleSizeSelection}
+          />
+          <label htmlFor="size-xlarge">X Large</label>
+        </FlexRow>
+      </FlexColumn>
+
+      <FlexColumn>
+        <h4>Brand</h4>
         {brands.map((brand) => {
           return (
-            <Fragment key={brand}>
+            <FlexRow key={brand}>
               <input
                 id={`brand-${brand}`}
                 type="checkbox"
@@ -123,27 +148,32 @@ export default function Filter({
                 onChange={handleBrandSelection}
               />
               <label htmlFor={`brand-${brand}`}>{brand}</label>
-            </Fragment>
+            </FlexRow>
           );
         })}
-      </div>
-      <div>
-        <h1>Ideal for</h1>
-        <label htmlFor="gender-m">Men</label>
-        <input
-          id="gender-f"
-          type="checkbox"
-          value="M"
-          onChange={handleGenderSelection}
-        />
-        <label htmlFor="gender-f">Women</label>
-        <input
-          id="gender-f"
-          type="checkbox"
-          value="F"
-          onChange={handleGenderSelection}
-        />
-      </div>
+      </FlexColumn>
+
+      <FlexColumn>
+        <h4>Ideal for</h4>
+        <FlexRow>
+          <input
+            id="gender-m"
+            type="checkbox"
+            value="M"
+            onChange={handleGenderSelection}
+          />
+          <label htmlFor="gender-m">Men</label>
+        </FlexRow>
+        <FlexRow>
+          <input
+            id="gender-f"
+            type="checkbox"
+            value="F"
+            onChange={handleGenderSelection}
+          />
+          <label htmlFor="gender-f">Women</label>
+        </FlexRow>
+      </FlexColumn>
     </>
   );
 }

@@ -18,10 +18,10 @@ export function sortData(
   if (sort === "NULL") {
     return products;
   } else if (sort === "LOW_TO_HIGH") {
-    const sortedProducts = products.sort((a, b) => a.price - b.price);
+    const sortedProducts = [...products].sort((a, b) => a.price - b.price);
     return sortedProducts;
   } else {
-    const sortedProducts = products.sort((a, b) => b.price - a.price);
+    const sortedProducts = [...products].sort((a, b) => b.price - a.price);
     return sortedProducts;
   }
 }

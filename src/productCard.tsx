@@ -7,7 +7,7 @@ const StyledDiv = styled.div`
   align-items: center;
   height: 450px;
   width: 250px;
-  margin: 0.5rem;
+  margin: 0 0.5rem 0.5rem 0.5rem;
   background-color: white;
 `;
 
@@ -54,9 +54,14 @@ const MRP = styled.s`
   color: gray;
 `;
 
-const Size = styled.div`
+const Sizes = styled.div`
   display: flex;
   width: 100%;
+  margin-top: 0.5rem;
+`;
+
+const Size = styled.span`
+  padding: 0 0.5rem;
 `;
 
 export default function ProductCard({
@@ -74,12 +79,12 @@ export default function ProductCard({
           <Price>&#8377;{product.price}</Price>
           <MRP>&#8377;{product.mrp}</MRP>
         </ProductPrice>
-        <Size>
+        <Sizes>
           <span>Size </span>
           {product.size.map((currentSize) => (
-            <span key={currentSize}> {currentSize} </span>
+            <Size key={currentSize}> {currentSize} </Size>
           ))}
-        </Size>
+        </Sizes>
       </ProductDescription>
     </StyledDiv>
   );
