@@ -7,7 +7,8 @@ export async function loadJSON(
   const data = await response.json();
   setData((previousData) => ({
     ...previousData,
-    products: data
+    products: data,
+    loading: false
   }));
 }
 

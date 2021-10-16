@@ -13,7 +13,8 @@ export default function App() {
       size: [],
       brand: [],
       gender: []
-    }
+    },
+    loading: true
   });
   let sortedProducts, filteredProducts;
 
@@ -25,15 +26,13 @@ export default function App() {
   useEffect(() => {
     loadJSON(setData);
   }, []);
-
-  // if (data?.products?.length !== 0) {
-  if (Object.keys(data).length !== 0) {
-    return (
-      <div className="App flex">
-        <Sidebar setData={setData} data={data} />
-        <ProductList products={filteredProducts} />
-      </div>
-    );
+  if (data.loading) {
+    return <h1>Loading...</h1>;
   }
-  return <h1>Loading..</h1>;
+  return (
+    <div className="App flex">
+      <Sidebar setData={setData} data={data} />
+      <ProductList products={filteredProducts} />
+    </div>
+  );
 }

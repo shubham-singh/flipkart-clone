@@ -17,8 +17,7 @@ export interface DataInterface {
   filter: {
     size: string[];
     gender: string[];
-    // size: ["S", "M", "L", "XL"];
-    // gender: ["M", "F"];
     brand: string[];
   };
+  loading: boolean;
 }
